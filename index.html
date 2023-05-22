@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="reset.css" />
+  <link rel="stylesheet" type="text/css" href="globals.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/icon-dashboard.webp">
+  <script> </script>
+  <title>Supabase</title>
+</head>
+<body>
+  <header class="header-page-wrapper">
+    <nav class="header-navbar"> 
+      <div class="header-page-menu-and-logo"> 
+          <img class="header-logo" src="./assets/logo-subpase.webp" alt="icon-subpace" loading="lazy" decoding="async" width="123" height="24"/>
+
+          <ul class="menu">
+            <li class="menu__menu-item-wrapper"> 
+              <span class="menu__menu-item" id="products"> 
+                <span> Product </span> 
+                <svg class='svg-icon' width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.293 1.293C0.480528 1.10553 0.734836 1.00021 1 1.00021C1.26516 1.00021 1.51947 1.10553 1.707 1.293L5 4.586L8.293 1.293C8.38525 1.19749 8.49559 1.12131 8.6176 1.0689C8.7396 1.01649 8.87082 0.988904 9.0036 0.987751C9.13638 0.986597 9.26806 1.0119 9.39095 1.06218C9.51385 1.11246 9.6255 1.18671 9.71939 1.28061C9.81329 1.3745 9.88754 1.48615 9.93782 1.60905C9.9881 1.73194 10.0134 1.86362 10.0123 1.9964C10.0111 2.12918 9.98351 2.2604 9.9311 2.38241C9.87869 2.50441 9.80251 2.61475 9.707 2.707L5.707 6.707C5.51947 6.89447 5.26516 6.99979 5 6.99979C4.73484 6.99979 4.48053 6.89447 4.293 6.707L0.293 2.707C0.105529 2.51947 0.000213623 2.26517 0.000213623 2C0.000213623 1.73484 0.105529 1.48053 0.293 1.293Z" fill="white"/>
+                </svg>
+              </span>
+
+              <ul class="sub-menu sub-menu-products">
+                <a class="products-sum-menu__item"> Database </a>
+                <a class="products-sum-menu__item"> Authentication </a>
+                <a class="products-sum-menu__item"> Storage </a>
+                <a class="products-sum-menu__item"> Functions </a>
+                <a class="products-sum-menu__item"> Coming soon </a>
+                <a class="products-sum-menu__item"> Pricing </a>
+              </ul>   
+            </li>
+
+            <li class="menu__menu-item-wrapper"> 
+              <span class="menu__menu-item" id="developers">
+                <span> Developers </span> 
+                <svg class='svg-icon' width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.293 1.293C0.480528 1.10553 0.734836 1.00021 1 1.00021C1.26516 1.00021 1.51947 1.10553 1.707 1.293L5 4.586L8.293 1.293C8.38525 1.19749 8.49559 1.12131 8.6176 1.0689C8.7396 1.01649 8.87082 0.988904 9.0036 0.987751C9.13638 0.986597 9.26806 1.0119 9.39095 1.06218C9.51385 1.11246 9.6255 1.18671 9.71939 1.28061C9.81329 1.3745 9.88754 1.48615 9.93782 1.60905C9.9881 1.73194 10.0134 1.86362 10.0123 1.9964C10.0111 2.12918 9.98351 2.2604 9.9311 2.38241C9.87869 2.50441 9.80251 2.61475 9.707 2.707L5.707 6.707C5.51947 6.89447 5.26516 6.99979 5 6.99979C4.73484 6.99979 4.48053 6.89447 4.293 6.707L0.293 2.707C0.105529 2.51947 0.000213623 2.26517 0.000213623 2C0.000213623 1.73484 0.105529 1.48053 0.293 1.293Z" fill="white"/>
+                </svg>
+              </span>
+
+              <ul class="sub-menu sub-menu-developers">
+                <a class="products-sum-menu__item"> Documentation </a>
+                <a class="products-sum-menu__item"> API </a>
+                <a class="products-sum-menu__item"> Guides </a>
+              </ul>  
+
+            </li>
+            <li class="menu__menu-item"> Beta </li>
+            <li class="menu__menu-item"> Pricing </li>
+          </ul>
+
+      </div>
+      <div class="header-page-btns"> 
+        <button class="btn btn_navbar"> Start your project </button>
+        <button class="sign-in-btn"> Sign in </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-page">
+    <section class="storage-section-wrapper">
+      <div class="storage-section"> 
+        <div class="storage-section__content"> 
+
+          <p class="storage-section__label">  
+
+            <span class="svg-container"> 
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.375 4H14.625H2.375ZM2.375 4C1.91087 4 1.46575 3.81563 1.13756 3.48744C0.809374 3.15925 0.625 2.71413 0.625 2.25C0.625 1.78587 0.809374 1.34075 1.13756 1.01256C1.46575 0.684374 1.91087 0.5 2.375 0.5H14.625C15.0891 0.5 15.5342 0.684374 15.8624 1.01256C16.1906 1.34075 16.375 1.78587 16.375 2.25C16.375 2.71413 16.1906 3.15925 15.8624 3.48744C15.5342 3.81563 15.0891 4 14.625 4H2.375ZM2.375 4V12.75C2.375 13.2141 2.55937 13.6592 2.88756 13.9874C3.21575 14.3156 3.66087 14.5 4.125 14.5H12.875C13.3391 14.5 13.7842 14.3156 14.1124 13.9874C14.4406 13.6592 14.625 13.2141 14.625 12.75V4H2.375ZM6.75 7.5H10.25H6.75Z" fill="#6A6A6A"/>
+              </svg>
+            </span>
+            
+             <span class="storage-section__label-value"> Storage </span> 
+          </p>
+
+          <h2 class="storage-section__title"> 
+            <span> Store and serve </span>
+            <span> Any type of digital content </span>
+          </h2>
+
+          <div class="storage-section__description">
+            <p> An open source Object store service with unlimited scalability, <br/> for any file type. </p>
+            <p> With custom policies and permissions that are familiar and easy to <br/> implement. </p>
+          </div>
+        </div>
+
+        <div class="storage-section__img-wrapper">
+          <img class="storage-section__img" src="./assets/create-content.webp" alt="Create digital content" loading="lazy" decoding="async"/>
+        </div>
+
+      </div>
+      <button class="btn btn_storage"> Start a project </button>
+    </section>
+    <section class="features-block" >
+
+      <div class="features-block__feature">
+        <div class="features-block__icons"> 
+          <span class="svg-container"> 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.33333 3.33335H10.6667H1.33333ZM1.33333 3.33335C0.979711 3.33335 0.640573 3.19288 0.390524 2.94283C0.140476 2.69278 0 2.35364 0 2.00002C0 1.6464 0.140476 1.30726 0.390524 1.05721C0.640573 0.807163 0.979711 0.666687 1.33333 0.666687H10.6667C11.0203 0.666687 11.3594 0.807163 11.6095 1.05721C11.8595 1.30726 12 1.6464 12 2.00002C12 2.35364 11.8595 2.69278 11.6095 2.94283C11.3594 3.19288 11.0203 3.33335 10.6667 3.33335H1.33333ZM1.33333 3.33335V10C1.33333 10.3536 1.47381 10.6928 1.72386 10.9428C1.97391 11.1929 2.31304 11.3334 2.66667 11.3334H9.33333C9.68696 11.3334 10.0261 11.1929 10.2761 10.9428C10.5262 10.6928 10.6667 10.3536 10.6667 10V3.33335H1.33333ZM4.66667 6.00002H7.33333Z" fill="#C4C4C4"/>
+            </svg>  
+          </span>
+
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.75 5.25L5.25 15.75" stroke="white" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.25 5.25L15.75 15.75" stroke="white" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+
+          <span class="svg-container"> 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2.66666C8.35362 2.66666 8.69276 2.80713 8.94281 3.05718C9.19286 3.30723 9.33333 3.64637 9.33333 3.99999L8 2.66666ZM12 3.99999C12.0002 4.62477 11.854 5.24091 11.5732 5.79902C11.2924 6.35714 10.8847 6.84171 10.3829 7.21391C9.88109 7.5861 9.29906 7.83558 8.68347 7.94233C8.06788 8.04909 7.43584 8.01015 6.838 7.82866L5.33333 9.33332H4V10.6667H2.66667V12H0.666667C0.489856 12 0.320286 11.9298 0.195262 11.8047C0.0702379 11.6797 0 11.5101 0 11.3333V9.60932C3.77583e-05 9.43252 0.0703004 9.26298 0.195333 9.13799L4.17133 5.16199C4.00497 4.612 3.95904 4.03262 4.0367 3.46329C4.11435 2.89395 4.31375 2.34804 4.62133 1.86269C4.92891 1.37734 5.33744 0.963953 5.81913 0.650669C6.30082 0.337385 6.84434 0.131556 7.41272 0.0471928C7.9811 -0.0371706 8.56098 0.0019115 9.11289 0.161779C9.66481 0.321647 10.1758 0.598547 10.6111 0.973632C11.0464 1.34872 11.3958 1.81318 11.6354 2.33542C11.8751 2.85765 11.9994 3.42539 12 3.99999Z" fill="#C4C4C4"/>
+            </svg>
+          </span>
+
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.75 5.25L5.25 15.75" stroke="white" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.25 5.25L15.75 15.75" stroke="white" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+
+          <span class="svg-container"> 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.666656 2.66667V9.33333C0.666656 10.8067 3.05466 12 5.99999 12C8.94532 12 11.3333 10.8067 11.3333 9.33333V2.66667H0.666656ZM0.666656 2.66667C0.666656 4.14 3.05466 5.33333 5.99999 5.33333C8.94532 5.33333 11.3333 4.14 11.3333 2.66667H0.666656ZM0.666656 2.66667C0.666656 1.19333 3.05466 0 5.99999 0C8.94532 0 11.3333 1.19333 11.3333 2.66667H0.666656ZM11.3333 6C11.3333 7.47333 8.94532 8.66667 5.99999 8.66667C3.05466 8.66667 0.666656 7.47333 0.666656 6" fill="#C4C4C4"/>
+            </svg> 
+          </span>
+
+        </div>
+        <p class="features-block-title"> Interoperable </p>
+        <p class="features-block-description"> Integrates well with the rest of Supabase ecosystem, including Auth and Postgres. </p>
+      </div>
+
+      <div class="features-block__feature">
+        <div class="features-block__icons"> 
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 17.5V8.75" stroke="#A2A2A2" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.75 17.5V3.5" stroke="#A2A2A2" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.25 17.5V14" stroke="#A2A2A2" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </div>
+        <p class="features-block-title"> Lightning fast </p>
+        <p class="features-block-description"> Thin API server layer that leverages Postgres' permissions and performance. </p>
+      </div>
+
+      <div class="features-block__feature">
+        <div class="features-block__icons"> 
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.875 9.625L10.5 12.25L19.25 3.5" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.375 10.5V16.625C18.375 17.0891 18.1906 17.5342 17.8624 17.8624C17.5342 18.1906 17.0891 18.375 16.625 18.375H4.375C3.91087 18.375 3.46575 18.1906 3.13756 17.8624C2.80937 17.5342 2.625 17.0891 2.625 16.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H14" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="features-block-title"> Dependable </p>
+        <p class="features-block-description features-block-description_small"> Enterprise-level scalability and durability. </p>
+      </div>
+
+    </section>
+
+    <section class="sleek-dashboard-section">
+      <h2 class="sleek-dashboard-section__title"> Sleek dashboard for managing your media </h2>
+      <h3 class="sleek-dashboard-section_subtitle"> A complete Object Explorer so that any of your team can use. </h3>
+      <p class="sleek-dashboard-section_description"> Drag and drop uploading, moving objects, and multiple object selection. As easy as working on your desktop. </p>
+
+      <figure class="dashboards-figure">
+
+        <div class="figure-dashboards__btns-and-img">
+          <div class="btns-block" id="btns-block-dashboards">
+            <button class="btns-block__btn btns-block__btn_active" id="file-previews"> File previews </button>
+            <button class="btns-block__btn" id="column-view"> Column view </button>
+            <button class="btns-block__btn" id="list-view"> List view </button>
+            <button class="btns-block__btn" id="multi-select-actions"> Multi select actions </button>
+            <button class="btns-block__btn" id="path-navigator"> Path navigator </button>
+          </div>
+
+          <img class="figure-dashboards-img img-for-btn" src="./assets/file-previews.webp" alt="for for-previews" loading="lazy" decoding="async" />
+
+        </div>
+
+        <figcaption class="dashboards-figcaption">
+          <p class="dashboards-figcaption-label dashboards-figcaption-label_top"> File previews </p>
+          <p class="dashboards-figcaption-sublabel"> Preview any media type, including video and audio. </p>
+          <p class="dashboards-figcaption-label dashboards-figcaption-label_bot"> Check out our example app </p>
+          <div class="dashboards-figcaption-description"> 
+            <div class="dashboards-figcaption-description__header"> 
+              <p class="dashboards-figcaption-description__header-title"> Profile management example </p>
+              <p class="dashboards-figcaption-description__header-description"> Update a user account with public profile information, including uploading a profile image. </p>
+              <p class="dashboards-figcaption-description__header-label">
+                <span> Created by: </span>
+                <img class="icon-dashboard" src="./assets/icon-dashboard.webp" alt="icon-dashboard" loading="lazy" decoding="async" width="24" height="24"/>
+                <span> supabase </span>
+              </p>
+            </div>
+
+            <div class="dashboards-figcaption-description__footer"> 
+              <p class="dashboards-figcaption-description__footer-label"> 
+
+                <span> nextjs-ts-user-management </span>
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 16.5V13.5975C11.0281 13.2398 10.9798 12.8803 10.8583 12.5428C10.7367 12.2053 10.5447 11.8975 10.295 11.64C12.65 11.3775 15.125 10.485 15.125 6.38995C15.1248 5.34282 14.722 4.33585 14 3.57745C14.3419 2.66133 14.3177 1.64872 13.9325 0.749953C13.9325 0.749953 13.0475 0.487453 11 1.85995C9.28101 1.39407 7.46899 1.39407 5.75 1.85995C3.7025 0.487453 2.8175 0.749953 2.8175 0.749953C2.43228 1.64872 2.40811 2.66133 2.75 3.57745C2.0226 4.34148 1.61939 5.35755 1.625 6.41245C1.625 10.4775 4.1 11.37 6.455 11.6625C6.20825 11.9174 6.01795 12.2215 5.89648 12.5549C5.77502 12.8883 5.72511 13.2435 5.75 13.5975V16.5M5.75 14.25C2 15.375 2 12.375 0.5 12L5.75 14.25Z" stroke="black" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                  
+              </p>
+              <div class="deploy-btn"> 
+                <div class="trianble-div"> </div>
+                <p lass="deploy-btn-label"> Deploy </p>
+              </div>
+            </div>
+
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="simple-api-section">
+
+      <div class="simple-api-section__text-content"> 
+        <h2 class="simple-api-section__text-content-title"> Simple and convenient </br> APIs </h2>
+        <p class="simple-api-section__text-content-description simple-api-section__text-content-description_top"> Built from the ground-up for interoperable authentication. </p>
+        <p class="simple-api-section__text-content-description simple-api-section__text-content-description_bot"> Fast and easy to implement using our powerful library clients. Asset optimization and image transformation coming soon! </p>
+
+        <div class="simple-api-section__text-content-bot">
+          <div class="simple-api-section__text-content-bot-item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.375 10.9813C6.10449 9.5408 8.28415 8.75195 10.535 8.75195C12.7858 8.75195 14.9655 9.5408 16.695 10.9813" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1.24249 7.87488C3.79961 5.62085 7.09125 4.3772 10.5 4.3772C13.9087 4.3772 17.2004 5.62085 19.7575 7.87488" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.46375 14.0961C8.35205 13.465 9.41471 13.126 10.5044 13.126C11.594 13.126 12.6567 13.465 13.545 14.0961" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.5 17.5H10.5088" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <p class="simple-api-section__text-content-bot-item-title"> CDN integration </p>
+            <p class="simple-api-section__text-content-bot-item-description"> Serve from the edge to reduce latency. </p>
+            <button class="btn-coming-soon btn-coming-soon_left"> Coming soon </button>
+          </div>
+          <div class="simple-api-section__text-content-bot-item">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2.625H18.375V7" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.5 17.5L18.375 2.625" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.375 14V18.375H14" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.125 13.125L18.375 18.375" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.5 3.5L7.875 7.875" stroke="#A1A1A1" stroke-width="0.875" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="simple-api-section__text-content-bot-item-title"> Auto transformation & optimisation </p>
+            <p class="simple-api-section__text-content-bot-item-description"> Resize and compress your media before you serve it. </p>
+            <button class="btn-coming-soon"> Coming soon </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="simple-api-section__btns-and-img">
+        <div class="btns-block" id="btns-block-simple-api">
+          <button class="btns-block__btn btns-block__btn_active" id="upload-file"> Upload a file </button>
+          <button class="btns-block__btn" id="download"> Download a file </button>
+          <button class="btns-block__btn" id="list-all"> List files </button>
+          <button class="btns-block__btn" id="move-files"> Move and rename files </button>
+          <button class="btns-block__btn" id="delete"> Delete files </button>
+        </div>
+
+        <div class="simple-api-section__img-wrapper">
+          <img class="simple-api-section__img img-for-btn" src="./assets/upload-file.webp" alt="upload file" loading="lazy" decoding="async" width="362" height="286"/>
+
+          <button class="btn-copy"> 
+
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_483)">
+              <path d="M11.6667 5.25H6.41667C5.77233 5.25 5.25 5.77233 5.25 6.41667V11.6667C5.25 12.311 5.77233 12.8333 6.41667 12.8333H11.6667C12.311 12.8333 12.8333 12.311 12.8333 11.6667V6.41667C12.8333 5.77233 12.311 5.25 11.6667 5.25Z" stroke="black" stroke-width="0.583333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2.91663 8.75008H2.33329C2.02387 8.75008 1.72713 8.62716 1.50833 8.40837C1.28954 8.18958 1.16663 7.89283 1.16663 7.58341V2.33341C1.16663 2.024 1.28954 1.72725 1.50833 1.50846C1.72713 1.28966 2.02387 1.16675 2.33329 1.16675H7.58329C7.89271 1.16675 8.18946 1.28966 8.40825 1.50846C8.62704 1.72725 8.74996 2.024 8.74996 2.33341V2.91675" stroke="black" stroke-width="0.583333" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1_483">
+              <rect width="14" height="14" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
+            <span class="btn-copy__text"> Copy </span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="integration-section">
+      <div class="integration-section__text-content">
+        <h2 class="integration-section__text-content-title"> 
+          Integrates natively <br/> with Supabase Auth
+        </h2>
+        <p class="integration-section__text-content-description integration-section__text-content-description_top"> Using Postgres Row Level Security to create Object access rules. </p>
+        <p class="integration-section__text-content-description integration-section__text-content-description_bot"> 
+          Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres functions, and even your own metadata to write policies. 
+        </p>
+
+        <button class="explore-doc"> 
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.25 12.75L12.75 5.25" stroke="#A1A1A1" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.25 5.25H12.75V12.75" stroke="#A1A1A1" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>   
+          <span> Expore documentation </span>         
+        </button>
+      </div>
+
+      <div class="integration-section__buttons-and-img">
+
+        <div class="btns-block" id="btns-block-integrations">
+          <button class="btns-block__btn btns-block__btn_active" id="copy-access"> Public access to a bucket </button>
+          <button class="btns-block__btn" id="public-access-folder"> Public access to a folder </button>
+          <button class="btns-block__btn" id="auth"> Authenticated access to a bucket </button>
+        </div>
+
+        <div class="integration-section__img-block">
+
+          <div class="integration-section__img-wrapper"> 
+            <img class="integration-section__img img-for-btn" src="./assets/copy-access.webp" alt="upload file" loading="lazy" decoding="async" width="290" height="88"/>
+            <button class="btn-copy"> 
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_483)">
+                <path d="M11.6667 5.25H6.41667C5.77233 5.25 5.25 5.77233 5.25 6.41667V11.6667C5.25 12.311 5.77233 12.8333 6.41667 12.8333H11.6667C12.311 12.8333 12.8333 12.311 12.8333 11.6667V6.41667C12.8333 5.77233 12.311 5.25 11.6667 5.25Z" stroke="black" stroke-width="0.583333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.91663 8.75008H2.33329C2.02387 8.75008 1.72713 8.62716 1.50833 8.40837C1.28954 8.18958 1.16663 7.89283 1.16663 7.58341V2.33341C1.16663 2.024 1.28954 1.72725 1.50833 1.50846C1.72713 1.28966 2.02387 1.16675 2.33329 1.16675H7.58329C7.89271 1.16675 8.18946 1.28966 8.40825 1.50846C8.62704 1.72725 8.74996 2.024 8.74996 2.33341V2.91675" stroke="black" stroke-width="0.583333" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1_483">
+                <rect width="14" height="14" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+              <span class="btn-copy__text"> Copy </span>
+            </button>
+          </div>
+
+          <p class="integration-section__img-block-title"> Allow public CRUD access to a bucket </p>
+          <p class="integration-section__img-block-description"> This will allow any user access to the bucket named 'avatars' </p>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="build-scale-section">
+      <h2 class="build-scale-section__title"> <span class="build-scale-section__title_gray">Build in a weekend, </span>scale to millions </h2>
+      <button class="btn btn_build-scale"> Start a project </button>
+    </section>
+  </main>
+
+  <footer class="footer-page">
+    <div class="footer-page__top">
+      <div class="footer-page__top-icons-block"> 
+        <img class="header-logo" src="./assets/logo-subpase.webp" alt="icon-subpace" loading="lazy" decoding="async" width="160" height="31"/>
+        <div class="footer-page__top-icons-block-svg">
+
+          <svg class="footer-page__top-icons-block-svg-item" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.29 20.251C15.837 20.251 19.965 13.998 19.965 8.57596C19.965 8.39796 19.965 8.22096 19.953 8.04596C20.7562 7.46448 21.4493 6.74457 22 5.91996C21.2511 6.25196 20.4566 6.46972 19.643 6.56596C20.4996 6.05302 21.1408 5.24631 21.447 4.29596C20.6417 4.77384 19.7607 5.11069 18.842 5.29196C18.2234 4.63372 17.405 4.19779 16.5136 4.05166C15.6222 3.90553 14.7075 4.05736 13.9111 4.48363C13.1147 4.9099 12.4811 5.58683 12.1083 6.40962C11.7355 7.2324 11.6444 8.15514 11.849 9.03496C10.2176 8.9532 8.6216 8.52928 7.16465 7.79073C5.70769 7.05217 4.42233 6.01548 3.392 4.74796C2.86732 5.65116 2.70659 6.72038 2.94254 7.73792C3.17848 8.75547 3.79337 9.64483 4.662 10.225C4.00926 10.2061 3.37063 10.0305 2.8 9.71296V9.76496C2.80039 10.7123 3.1284 11.6303 3.7284 12.3633C4.3284 13.0964 5.16347 13.5993 6.092 13.787C5.48781 13.9517 4.85389 13.9756 4.239 13.857C4.50116 14.6724 5.01168 15.3856 5.69913 15.8966C6.38658 16.4076 7.21657 16.6909 8.073 16.707C7.22212 17.3755 6.24779 17.8698 5.20573 18.1615C4.16367 18.4532 3.07432 18.5366 2 18.407C3.8766 19.6113 6.06019 20.2501 8.29 20.247" fill="#A1A1A1"/>
+          </svg>
+
+          <svg class="footer-page__top-icons-block-svg-item" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017C2 16.442 4.865 20.197 8.839 21.521C9.339 21.613 9.521 21.304 9.521 21.038C9.521 20.801 9.513 20.17 9.508 19.335C6.726 19.94 6.139 17.992 6.139 17.992C5.685 16.834 5.029 16.526 5.029 16.526C4.121 15.906 5.098 15.918 5.098 15.918C6.101 15.988 6.629 16.95 6.629 16.95C7.521 18.48 8.97 18.038 9.539 17.782C9.631 17.135 9.889 16.694 10.175 16.444C7.955 16.191 5.62 15.331 5.62 11.493C5.62 10.4 6.01 9.505 6.649 8.805C6.546 8.552 6.203 7.533 6.747 6.155C6.747 6.155 7.587 5.885 9.497 7.181C10.3128 6.95851 11.1544 6.84519 12 6.844C12.85 6.848 13.705 6.959 14.504 7.181C16.413 5.885 17.251 6.154 17.251 6.154C17.797 7.533 17.453 8.552 17.351 8.805C17.991 9.505 18.379 10.4 18.379 11.493C18.379 15.341 16.04 16.188 13.813 16.436C14.172 16.745 14.491 17.356 14.491 18.291C14.491 19.629 14.479 20.71 14.479 21.038C14.479 21.306 14.659 21.618 15.167 21.52C17.1583 20.8521 18.8893 19.5753 20.1155 17.87C21.3416 16.1648 22.0009 14.1173 22 12.017C22 6.484 17.522 2 12 2Z" fill="#A1A1A1"/>
+          </svg>
+
+        </div>
+      </div>
+
+      <div class="footer-page__top-links-block">
+
+        <div class="footer-page__top-links-group">
+          <h3 class="footer-page__top-links-group-title"> Product </h3>
+          <a class="footer-page__top-links-group-item"> Database </a>
+          <a class="footer-page__top-links-group-item"> Authentication </a>
+          <a class="footer-page__top-links-group-item"> Storage </a>
+          <a class="footer-page__top-links-group-item"> Functions </a>
+          <a class="footer-page__top-links-group-item"> Coming soon </a>
+          <a class="footer-page__top-links-group-item"> Pricing </a>
+        </div>
+
+        <div class="footer-page__top-links-group">
+          <h3 class="footer-page__top-links-group-title"> Resources </h3>
+          <a class="footer-page__top-links-group-item"> Support </a>
+          <a class="footer-page__top-links-group-item"> Case Studies </a>
+          <a class="footer-page__top-links-group-item"> System Status </a>
+          <a class="footer-page__top-links-group-item"> Terms of service </a>
+        </div>
+
+        <div class="footer-page__top-links-group">
+          <h3 class="footer-page__top-links-group-title"> Developers </h3>
+          <a class="footer-page__top-links-group-item"> Documentation </a>
+          <a class="footer-page__top-links-group-item"> API Reference </a>
+          <a class="footer-page__top-links-group-item"> Guides </a>
+        </div>
+
+        <div class="footer-page__top-links-group">
+          <h3 class="footer-page__top-links-group-title"> Company </h3>
+          <a class="footer-page__top-links-group-item"> Blog </a>
+          <a class="footer-page__top-links-group-item"> Open Source </a>
+          <a class="footer-page__top-links-group-item"> Humans.txt </a>
+          <a class="footer-page__top-links-group-item"> Lawyers.txt </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-page__bot">
+      <span class="footer-page__bot-label"> © Supabase Inc </span>
+
+      <div class="footer-page__bot-icons">
+
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0C14.3713 0 14.7274 0.147499 14.99 0.41005C15.2525 0.672601 15.4 1.0287 15.4 1.4V2.8C15.4 3.1713 15.2525 3.5274 14.99 3.78995C14.7274 4.0525 14.3713 4.2 14 4.2C13.6287 4.2 13.2726 4.0525 13.0101 3.78995C12.7475 3.5274 12.6 3.1713 12.6 2.8V1.4C12.6 1.21615 12.6362 1.0341 12.7066 0.864243C12.7769 0.694387 12.88 0.540052 13.0101 0.41005C13.1401 0.280048 13.2944 0.176925 13.4642 0.106569C13.6341 0.036212 13.8161 0 14 0ZM4.1 4.1C4.23 3.96998 4.38435 3.86685 4.55421 3.79648C4.72408 3.72612 4.90614 3.6899 5.09 3.6899C5.27386 3.6899 5.45592 3.72612 5.62579 3.79648C5.79565 3.86685 5.95 3.96998 6.08 4.1L7.07 5.09C7.20001 5.22001 7.30314 5.37435 7.3735 5.54422C7.44386 5.71408 7.48007 5.89614 7.48007 6.08C7.48007 6.26386 7.44386 6.44592 7.3735 6.61578C7.30314 6.78565 7.20001 6.93999 7.07 7.07C6.93999 7.20001 6.78565 7.30314 6.61578 7.3735C6.44592 7.44386 6.26386 7.48007 6.08 7.48007C5.89614 7.48007 5.71408 7.44386 5.54422 7.3735C5.37435 7.30314 5.22001 7.20001 5.09 7.07L4.1 6.08C3.96998 5.95 3.86685 5.79565 3.79648 5.62579C3.72612 5.45592 3.6899 5.27386 3.6899 5.09C3.6899 4.90614 3.72612 4.72408 3.79648 4.55421C3.86685 4.38435 3.96998 4.23 4.1 4.1ZM23.9 4.1C24.03 4.23 24.1332 4.38435 24.2035 4.55421C24.2739 4.72408 24.3101 4.90614 24.3101 5.09C24.3101 5.27386 24.2739 5.45592 24.2035 5.62579C24.1332 5.79565 24.03 5.95 23.9 6.08L22.91 7.07C22.6474 7.33256 22.2913 7.48007 21.92 7.48007C21.5487 7.48007 21.1926 7.33256 20.93 7.07C20.6674 6.80744 20.5199 6.45132 20.5199 6.08C20.5199 5.70868 20.6674 5.35256 20.93 5.09L21.92 4.1C22.05 3.96998 22.2043 3.86685 22.3742 3.79648C22.5441 3.72612 22.7261 3.6899 22.91 3.6899C23.0939 3.6899 23.2759 3.72612 23.4458 3.79648C23.6157 3.86685 23.77 3.96998 23.9 4.1ZM7 14C7 12.1435 7.7375 10.363 9.05025 9.05025C10.363 7.7375 12.1435 7 14 7C15.8565 7 17.637 7.7375 18.9497 9.05025C20.2625 10.363 21 12.1435 21 14C21 15.8565 20.2625 17.637 18.9497 18.9497C17.637 20.2625 15.8565 21 14 21C12.1435 21 10.363 20.2625 9.05025 18.9497C7.7375 17.637 7 15.8565 7 14ZM0 14C0 13.6287 0.147499 13.2726 0.41005 13.0101C0.672601 12.7475 1.0287 12.6 1.4 12.6H2.8C2.98385 12.6 3.1659 12.6362 3.33576 12.7066C3.50561 12.7769 3.65995 12.88 3.78995 13.0101C3.91995 13.1401 4.02308 13.2944 4.09343 13.4642C4.16379 13.6341 4.2 13.8161 4.2 14C4.2 14.1839 4.16379 14.3659 4.09343 14.5358C4.02308 14.7056 3.91995 14.8599 3.78995 14.99C3.65995 15.12 3.50561 15.2231 3.33576 15.2934C3.1659 15.3638 2.98385 15.4 2.8 15.4H1.4C1.0287 15.4 0.672601 15.2525 0.41005 14.99C0.147499 14.7274 0 14.3713 0 14ZM23.8 14C23.8 13.6287 23.9475 13.2726 24.2101 13.0101C24.4726 12.7475 24.8287 12.6 25.2 12.6H26.6C26.7839 12.6 26.9659 12.6362 27.1358 12.7066C27.3056 12.7769 27.4599 12.88 27.5899 13.0101C27.72 13.1401 27.8231 13.2944 27.8934 13.4642C27.9638 13.6341 28 13.8161 28 14C28 14.1839 27.9638 14.3659 27.8934 14.5358C27.8231 14.7056 27.72 14.8599 27.5899 14.99C27.4599 15.12 27.3056 15.2231 27.1358 15.2934C26.9659 15.3638 26.7839 15.4 26.6 15.4H25.2C24.8287 15.4 24.4726 15.2525 24.2101 14.99C23.9475 14.7274 23.8 14.3713 23.8 14ZM20.93 20.93C21.06 20.8 21.2143 20.6968 21.3842 20.6265C21.5541 20.5561 21.7361 20.5199 21.92 20.5199C22.1039 20.5199 22.2859 20.5561 22.4558 20.6265C22.6257 20.6968 22.78 20.8 22.91 20.93L23.9 21.92C24.03 22.05 24.1331 22.2044 24.2035 22.3742C24.2739 22.5441 24.3101 22.7261 24.3101 22.91C24.3101 23.0939 24.2739 23.2759 24.2035 23.4458C24.1331 23.6156 24.03 23.77 23.9 23.9C23.77 24.03 23.6156 24.1331 23.4458 24.2035C23.2759 24.2739 23.0939 24.3101 22.91 24.3101C22.7261 24.3101 22.5441 24.2739 22.3742 24.2035C22.2044 24.1331 22.05 24.03 21.92 23.9L20.93 22.91C20.8 22.78 20.6968 22.6257 20.6265 22.4558C20.5561 22.2859 20.5199 22.1039 20.5199 21.92C20.5199 21.7361 20.5561 21.5541 20.6265 21.3842C20.6968 21.2143 20.8 21.06 20.93 20.93ZM5.09 20.93C5.35256 20.6674 5.70868 20.5199 6.08 20.5199C6.45132 20.5199 6.80744 20.6674 7.07 20.93C7.33256 21.1926 7.48007 21.5487 7.48007 21.92C7.48007 22.2913 7.33256 22.6474 7.07 22.91L6.08 23.9C5.94999 24.03 5.79565 24.1331 5.62578 24.2035C5.45592 24.2739 5.27386 24.3101 5.09 24.3101C4.90614 24.3101 4.72408 24.2739 4.55422 24.2035C4.38435 24.1331 4.23001 24.03 4.1 23.9C3.96999 23.77 3.86686 23.6156 3.7965 23.4458C3.72614 23.2759 3.68993 23.0939 3.68993 22.91C3.68993 22.7261 3.72614 22.5441 3.7965 22.3742C3.86686 22.2044 3.96999 22.05 4.1 21.92L5.09 20.93ZM14 23.8C14.3713 23.8 14.7274 23.9475 14.99 24.2101C15.2525 24.4726 15.4 24.8287 15.4 25.2V26.6C15.4 26.9713 15.2525 27.3274 14.99 27.5899C14.7274 27.8525 14.3713 28 14 28C13.6287 28 13.2726 27.8525 13.0101 27.5899C12.7475 27.3274 12.6 26.9713 12.6 26.6V25.2C12.6 24.8287 12.7475 24.4726 13.0101 24.2101C13.2726 23.9475 13.6287 23.8 14 23.8Z" fill="url(#paint0_linear_1_1735)"/>
+          <defs>
+          <linearGradient id="paint0_linear_1_1735" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#BBBBBB"/>
+          <stop offset="1" stop-color="#BBBBBB"/>
+          </linearGradient>
+          </defs>
+        </svg>
+        
+        <span class="switcher-theme">
+          <span class="switcher-theme-circle"> </span>
+        </span>
+          
+
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.353 0.939098C7.49145 1.07776 7.58611 1.25405 7.62522 1.44605C7.66433 1.63806 7.64618 1.83733 7.573 2.0191C6.98754 3.47415 6.8427 5.06919 7.15649 6.6059C7.47028 8.1426 8.22885 9.55317 9.33789 10.6622C10.4469 11.7712 11.8575 12.5298 13.3942 12.8436C14.9309 13.1574 16.526 13.0126 17.981 12.4271C18.1628 12.3541 18.362 12.336 18.5539 12.3752C18.7459 12.4144 18.9221 12.5092 19.0606 12.6476C19.1992 12.7861 19.2941 12.9622 19.3334 13.1541C19.3728 13.346 19.3549 13.5453 19.282 13.7271C18.5375 15.5796 17.2557 17.167 15.6016 18.2849C13.9474 19.4028 11.9965 20.0002 10 20.0001C4.477 20.0001 0 15.5231 0 10.0001C0 5.7931 2.598 2.1951 6.273 0.718098C6.45477 0.644923 6.65404 0.626763 6.84605 0.665876C7.03805 0.704988 7.21434 0.799649 7.353 0.938098V0.939098Z" fill="#A1A1A1"/>
+        </svg>
+          
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="./index.js"></script>
+</body>
+</html>
